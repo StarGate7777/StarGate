@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.460589e6.css",
+    "main.js": "/static/js/main.c39dc638.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/pp3.jpg": "/static/media/pp3.d6db88d59c75de2d3f3a.jpg",
+    "static/media/pp5.jpg": "/static/media/pp5.0716d5481b2fb9ee0748.jpg",
+    "static/media/sarthak.jpg": "/static/media/sarthak.d768dece7d98225bedf1.jpg",
+    "static/media/pp2.jpg": "/static/media/pp2.ff6e897e3c5b6eae3141.jpg",
+    "static/media/pp2.png": "/static/media/pp2.d93a19e421353878b371.png",
+    "static/media/unv-img.jpg": "/static/media/unv-img.59c320b9939ae999f358.jpg",
+    "static/media/pp img 2.jpg": "/static/media/pp img 2.9c6803027998b6ab68ff.jpg",
+    "static/media/pp img 5.png": "/static/media/pp img 5.b52f8da367a46d0ac0df.png",
+    "static/media/pp1.jpg": "/static/media/pp1.d88b3f794faea81313bb.jpg",
+    "static/media/pp img 1.jpg": "/static/media/pp img 1.30457232bd1274773903.jpg",
+    "static/media/saniya.jpg": "/static/media/saniya.4f05e4025113b1d04cf7.jpg",
+    "static/media/pp img 6.jpg": "/static/media/pp img 6.fe5c3720741a434a72f7.jpg",
+    "static/media/logo.jpg": "/static/media/logo.007f6a00c91319aed79e.jpg",
+    "static/media/img3.jpg": "/static/media/img3.c78e26eb5da20dccb619.jpg",
+    "static/media/vedant1.jpg": "/static/media/vedant1.f0212fbcec56e7f3ae80.jpg",
+    "static/media/img1.jpg": "/static/media/img1.3bc647eca8b30d23ab55.jpg",
+    "static/media/coep.jpg": "/static/media/coep.a1c603b91c61c644d265.jpg",
+    "static/media/pict.jpg": "/static/media/pict.ece74d2d67ac4b20f3d1.jpg",
+    "static/media/Adarshprofilepic.jpg": "/static/media/Adarshprofilepic.1c930c4bc6f96d5f6df9.jpg",
+    "static/media/pp img 3.jpg": "/static/media/pp img 3.b310df2456e3e584281c.jpg",
+    "static/media/img2.jpg": "/static/media/img2.c28abf832f3ad9cdea14.jpg",
+    "static/media/pp4.jpg": "/static/media/pp4.9c3081140e1c049a0f2c.jpg",
+    "static/media/stargate.jpg": "/static/media/stargate.013ed0c5c0696e7ce824.jpg",
+    "static/media/blankimg.jpg": "/static/media/blankimg.fcc5d32ad154a3ae0238.jpg",
+    "index.html": "/index.html",
+    "main.460589e6.css.map": "/static/css/main.460589e6.css.map",
+    "main.c39dc638.js.map": "/static/js/main.c39dc638.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.460589e6.css",
+    "static/js/main.c39dc638.js"
+  ]
+}
