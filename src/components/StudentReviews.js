@@ -5,6 +5,8 @@ import pp2 from "../assests/studentreview/pp1.jpg";
 import pp3 from "../assests/studentreview/pp2.jpg";
 import pp4 from "../assests/studentreview/pp4.jpg";
 import pp5 from "../assests/studentreview/pp5.jpg";
+import pp7 from "../assests/studentreview/pp img7.jpg"
+
 import blankimg from "../assests/studentreview/blankimg.jpg";
 
 const reviews = [
@@ -28,7 +30,7 @@ With their help, I secured CSD at VIT, which turned out to be the perfect fit. T
     text: `Getting into VJTI Mechanical was a dream come true, and Stargate Counselling played a big role in it. From the very beginning, they provided a personal touch that made the whole process stress-free. Every step—from form filling to college preference listing—was handled with clarity and care, through well-managed meetings.
 
 Highly recommend Stargate to all aspiring students!`,
-    image: blankimg,
+    image: pp7,
   },
   {
     name: "",
