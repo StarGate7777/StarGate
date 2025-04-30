@@ -12,7 +12,7 @@ const teamMembers = [
     bgColor: "bg-teal-300",
   },
   {
-    name: "Adarsh Dhawale",
+    name: "Adarsh ",
     role: "Technical Head.",
     image: adarsh,
     bgColor: "bg-[#D3E671]",
