@@ -74,54 +74,86 @@ Thanks to their efforts, I achieved my goal. Highly recommend their services to 
 
 export default function StudentReviews({ scrollToFooter }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(null);
+  const [touchEndX, setTouchEndX] = useState(null);
 
   const prevReview = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
+    );
   };
 
   const nextReview = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === reviews.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
-  // Auto-slide every 6 seconds
+  // Auto-slide every 10 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => {
-        if (prevIndex === reviews.length - 1) {
-          return 0; // After last review, go back to first
-        }
-        return prevIndex + 1;
-      });
-    }, 10000); // Changed to 6 seconds for better readability
-  
+      setCurrentIndex((prevIndex) =>
+        prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 10000);
+
     return () => clearInterval(interval);
   }, []);
-  
+
+  // Swipe Handlers
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    const distance = touchStartX - touchEndX;
+    const minSwipeDistance = 50;
+    if (distance > minSwipeDistance) nextReview(); // swipe left
+    else if (distance < -minSwipeDistance) prevReview(); // swipe right
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
 
   return (
     <div className="py-8 overflow-y-hidden sm:py-16 px-4 sm:px-8 md:px-16 bg-white flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
-      {/* Left Section - Made responsive */}
+      {/* Left Section */}
       <div className="md:w-1/2 text-left items-center pl-0 sm:pl-4 md:pl-8 lg:pl-16 xl:pl-32">
-  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-libre mb-2 sm:mb-12">
-    From Students to Mentors
-  </h1>
-  <h2 className="text-base sm:text-xl lg:text-2xl mb-2 sm:mb-4 font-poppins pl-2 leading-loose sm:pl-4">
-    Our team has been through the same admission process you’re facing. We've made the mistakes, learned the lessons, and now we’re here to make your path clearer. That’s what makes our guidance real and relatable.
-  </h2>
-</div>
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-libre mb-2 sm:mb-12">
+          From Students to Mentors
+        </h1>
+        <h2 className="text-base sm:text-xl lg:text-2xl mb-2 sm:mb-4 font-poppins pl-2 leading-loose sm:pl-4">
+          Our team has been through the same admission process you’re facing. We've made the mistakes, learned the lessons, and now we’re here to make your path clearer. That’s what makes our guidance real and relatable.
+        </h2>
+      </div>
 
-      {/* Review Card - Made responsive */}
-      <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl bg-blue-500 text-white p-6 sm:p-8 md:p-10 shadow-lg rounded-lg">
-        <h1 className="text-3xl  text mb-3 font-libre"> Stories That speak :</h1>
+      {/* Review Card with Swipe */}
+      <div
+        className="relative w-full max-w-md sm:max-w-lg md:max-w-xl bg-blue-500 text-white p-6 sm:p-8 md:p-10 shadow-lg rounded-lg"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <h1 className="text-3xl mb-3 font-libre"> Stories That speak :</h1>
         <img
           src={reviews[currentIndex].image}
           alt={reviews[currentIndex].name}
           className="absolute -left-8 sm:-left-10 md:-left-12 top-1/2 transform -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-4 border-white shadow-lg"
         />
         <div className="pl-6 sm:pl-8 md:pl-10">
-          <h3 className="text-lg sm:text-xl md:text-xl font-semibold">{reviews[currentIndex].university}</h3>
-          <p className="text-sm sm:text-base md:text-m mt-1 sm:mt-2">{reviews[currentIndex].name}</p>
-          <p className="mt-3 sm:mt-4 text-s sm:text-sm md:text-base leading-relaxed">"{reviews[currentIndex].text}"</p>
+          <h3 className="text-lg sm:text-xl md:text-xl font-semibold">
+            {reviews[currentIndex].university}
+          </h3>
+          <p className="text-sm sm:text-base md:text-m mt-1 sm:mt-2">
+            {reviews[currentIndex].name}
+          </p>
+          <p className="mt-3 sm:mt-4 text-s sm:text-sm md:text-base leading-relaxed">
+            "{reviews[currentIndex].text}"
+          </p>
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 sm:mt-8">
@@ -133,7 +165,7 @@ export default function StudentReviews({ scrollToFooter }) {
             ))}
           </div>
 
-          {/* Navigation Buttons - Made larger on mobile */}
+          {/* Navigation Buttons */}
           <div className="flex justify-end mt-2 sm:mt-3 gap-2">
             <button
               onClick={prevReview}
