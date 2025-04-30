@@ -6,7 +6,7 @@ import vedant from '../assests/Aboutus/vedant1.jpg'
 
 const teamMembers = [
   {
-    name: "Vedant Lakade",
+    name: "Vedant ",
     role: "Head of Opperations .",
     image: vedant,
     bgColor: "bg-teal-300",
@@ -18,13 +18,13 @@ const teamMembers = [
     bgColor: "bg-[#D3E671]",
   },
   {
-    name: "Saniya Lakade",
+    name: "Saniya",
     role: "Councling head.",
     image: saniya,
     bgColor: "bg-red-400",
   },
   {
-    name: "Sarthak Lakade",
+    name: "Sarthak ",
     role: "Public Relations.",
     image: sarthak,
     bgColor: "bg-blue-400",
