@@ -8,7 +8,7 @@ import StudentForm from './StudentForm';
 import logo from '../assests/logo.jpg';
 import pp1 from '../assests/display images/pp img 1.jpg';
 import pp2 from '../assests/display images/pp img 2.jpg';
-import pp3 from '../assests/display images/pp img 3.jpg';
+import pp3 from '../assests/display images/pp img 7.jpg';
 import pp4 from '../assests/display images/pp2.png';
 import pp5 from '../assests/display images/pp img 5.png';
 import pp6 from '../assests/display images/pp img 6.jpg';
