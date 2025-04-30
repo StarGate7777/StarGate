@@ -5,7 +5,7 @@ import pp2 from "../assests/studentreview/pp1.jpg";
 import pp3 from "../assests/studentreview/pp2.jpg";
 import pp4 from "../assests/studentreview/pp4.jpg";
 import pp5 from "../assests/studentreview/pp5.jpg";
-import pp7 from "../assests/studentreview/pp img7.jpg"
+import pp7 from "../assests/studentreview/pp7.jpg"
 
 import blankimg from "../assests/studentreview/blankimg.jpg";
 
