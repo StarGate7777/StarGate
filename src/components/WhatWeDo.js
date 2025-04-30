@@ -45,7 +45,7 @@ export default function WhatWeDo({ scrollToFooter }) {
       setCurrentIndex((prevIndex) =>
         prevIndex === admissions.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
