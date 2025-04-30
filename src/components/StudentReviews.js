@@ -92,7 +92,7 @@ export default function StudentReviews({ scrollToFooter }) {
         }
         return prevIndex + 1;
       });
-    }, 6000); // Changed to 6 seconds for better readability
+    }, 10000); // Changed to 6 seconds for better readability
   
     return () => clearInterval(interval);
   }, []);
