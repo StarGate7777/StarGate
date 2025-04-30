@@ -19,7 +19,7 @@ const teamMembers = [
   },
   {
     name: "Saniya",
-    role: "Councling head.",
+    role: "Counselling head.",
     image: saniya,
     bgColor: "bg-red-400",
   },
