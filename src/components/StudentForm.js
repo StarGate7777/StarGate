@@ -37,10 +37,6 @@ const StudentForm = () => {
       setErrorMessage("Phone number is required");
       return false;
     }
-    if (!formData.cetPercentile) {
-      setErrorMessage("CET percentile is required");
-      return false;
-    }
     if (!formData.caste) {
       setErrorMessage("Please select your category");
       return false;
@@ -212,7 +208,7 @@ const StudentForm = () => {
         <input
           type="text"
           name="gradeLevel"
-          placeholder="Current School Year / Grade Level (Optional)"
+          placeholder="12th grade score (Optional)"
           className="w-full p-2 rounded text-black bg-white mb-3"
           value={formData.gradeLevel}
           onChange={handleChange}
@@ -220,7 +216,7 @@ const StudentForm = () => {
         <input
           type="text"
           name="cetPercentile"
-          placeholder="CET Percentile *"
+          placeholder="CET Percentile  (optional)*"
           className="w-full p-2 rounded text-black bg-white mb-3"
           value={formData.cetPercentile}
           onChange={handleChange}
