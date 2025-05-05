@@ -37,6 +37,10 @@ const StudentForm = () => {
       setErrorMessage("Phone number is required");
       return false;
     }
+     if (!formData.cetPercentile) {
+      setErrorMessage("CET percentile is required");
+      return false;
+    }
     if (!formData.caste) {
       setErrorMessage("Please select your category");
       return false;
